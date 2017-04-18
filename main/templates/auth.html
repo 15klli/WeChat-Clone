@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
     <meta content="telephone=no" name="format-detection" />
-    <title>广科小喵</title>
+    <title>汕大一卡通助手</title>
     <link rel="stylesheet" href="http://gxgk-wechat.b0.upaiyun.com/styles/weui.min.css" />
     <link rel="stylesheet" href="http://gxgk-wechat.b0.upaiyun.com/styles/auth.min.css" />
     <script type="text/javascript">
         var _hmt = _hmt || [];
         (function() {
-            var hm = document.createElement("script");
+            var hm = document.createElement("script");  
             hm.src = "//hm.baidu.com/hm.js?{{ baidu_analytics }}";
             var s = document.getElementsByTagName("script")[0];
             s.parentNode.insertBefore(hm, s);
@@ -37,12 +37,21 @@
                 </div>
                 <div class="weui_cell">
                     <div class="weui_cell_hd">
+                        <label class="weui_label">一卡通号</label>
+                    </div>
+                    <div class="weui_cell_bd weui_cell_primary">
+                        <input class="weui_input" id="password" type="password" placeholder="{{ password_label_placeholder }}" />
+                    </div>
+                </div>
+                <div class="weui_cell">
+                    <div class="weui_cell_hd">
                         <label class="weui_label">密码</label>
                     </div>
                     <div class="weui_cell_bd weui_cell_primary">
                         <input class="weui_input" id="password" type="password" placeholder="{{ password_label_placeholder }}" />
                     </div>
                 </div>
+                
             </div>
             <div class="weui_btn_area">
                 <a class="weui_btn weui_btn_primary" id="submit">绑定</a>
