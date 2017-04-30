@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="zh_CN">
+    <head>    
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+        <title>拾卡登记</title>
+        <!-- 引入 WeUI -->
+        <link rel="stylesheet" href="../styles/weui.min.css"/>
+        <link rel="stylesheet" href="../styles/auth.min.css">
+       <link rel="stylesheet" href="../styles/jquery-weui/dist/lib/weui.min.css">
+        
+        <link rel="stylesheet" href="../styles/jquery-weui/dist/css/jquery-weui.css">
+    </head>
+    <body>
+    <script text="text/javascript" src="../styles/jquery-weui/dist/lib/jquery-2.1.4.js"></script>
+<script text="text/javascript" src="../styles/jquery-weui/dist/js/jquery-weui.js"></script>
+        <div class="weui-cell__hd" style="margin: 10%">
+            <h1 class="page_title">拾卡登记</h1>
+        </div>
+        <div class="weui-cells weui-cells_form" id="pickform">
+            <div class="weui-cell">
+                <div class="weui-cell__hd"><label class="weui-label">一卡通号</label></div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" required="required"  type="number" pattern="[0-9]*" placeholder="请输入所拾卡的一卡通号" id="pickCardNum">                    
+                </div>                
+            </div>
+
+            <div class="weui-cell">
+                <div class="weui-cell__hd"><label class="weui-label">学号</label></div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" required="required"  type="number" pattern="[0-9]*" placeholder="请输入所拾卡的学号" id="pickStudentNum">
+                </div>                
+            </div>
+
+            <div class="weui-cell">
+                <div class="weui-cell__hd"><label class="weui-label">学院</label></div>
+               <input type="text" class="weui-input" id="picker"/>
+              <script>
+                $("#picker").picker({
+                  title: "请选择卡显示的学院",
+                  cols: [
+                    {
+                      textAlign: 'center',
+                      values: ['','工学院', '理学院', '文学院' ,'商学院', '法学院','医学院' ,'新闻学院', '艺术学院','教职工']
+                    }
+                  ]
+                });
+                </script>   
+            </div>                    
+        </div>    
+        <div class="weui-cells__tips">*请填写所拾卡的信息</div>   
+        <input type="button" class="weui-btn weui-btn_primary" style="width: 50%" value="提交" onclick="basicCheck()">
+        <script type="text/javascript" src="../scripts/basicCheck.js"></script>
+    </body>
+   
+</html>
