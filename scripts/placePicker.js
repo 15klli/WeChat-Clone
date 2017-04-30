@@ -1,5 +1,5 @@
 function showPlacePicker() {
-    $("#choosePlace")[0].style.display = 'inline-block'; 
+    $("#choosePlace")[0].style.display = 'inherit'; 
     $("#diy")[0].style.display = 'none'; 
         }
 $("#placePicker").select({
@@ -53,6 +53,6 @@ $("#placePicker").select({
 });
 
 function showDiy(){
-    $("#diy")[0].style.display = 'inline-block'; 
+    $("#diy")[0].style.display = 'inherit'; 
     $("#choosePlace")[0].style.display = 'none'; 
 }
